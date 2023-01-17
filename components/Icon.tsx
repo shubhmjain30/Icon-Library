@@ -19,13 +19,13 @@ type Props = {
 };
 
 export const Icon = ({ name, style, ...rest }: Props) => {
-	const transform: any = IconLibrary[name]?.transform;
-	const viewBox: any = IconLibrary[name]?.viewBox;
-	const renderPaths = IconLibrary[name]?.paths[0];
+	const transform = IconLibrary[name]?.transform;
+	const viewBox = IconLibrary[name]?.viewBox;
+	const paths = IconLibrary[name]?.paths[0];
 
 	return (
 		<svg style={style} viewBox={viewBox} {...rest} className="custom-icon">
-			<path d={renderPaths} fill="currentColor" transform={transform} />
+			<path d={paths} fill="currentColor" transform={transform} />
 		</svg>
 	);
 };
