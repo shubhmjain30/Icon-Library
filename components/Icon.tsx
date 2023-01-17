@@ -12,23 +12,20 @@ export type IconNameType =
 
 type Props = {
 	name: IconNameType;
+	color?: string;
+	width?: string;
+	height?: string;
 	style?: React.CSSProperties;
 };
 
-export const Icon = ({ name, style = { opacity: 1 } }: Props) => {
-	const ext: any = IconLibrary[name]?.transform;
+export const Icon = ({ name, style, ...rest }: Props) => {
+	const transform: any = IconLibrary[name]?.transform;
 	const viewBox: any = IconLibrary[name]?.viewBox;
-	const renderPaths = IconLibrary[name]?.paths.map(
-		(path: string, index: number) => (
-			<g transform={ext}>
-				<path key={index} d={path} />
-			</g>
-		)
-	);
+	const renderPaths = IconLibrary[name]?.paths[0];
 
 	return (
-		<svg style={style} viewBox={viewBox} className="custom-icon">
-			{renderPaths}
+		<svg style={style} viewBox={viewBox} {...rest} className="custom-icon">
+			<path d={renderPaths} fill="currentColor" transform={transform} />
 		</svg>
 	);
 };

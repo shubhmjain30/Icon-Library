@@ -13,12 +13,12 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Icon name="file-download" />
-			<Icon name="file-upload" />
-			<Icon name="add" />
-			<Icon name="chevron-left" />
-			<Icon name="arrow-forward" />
-			<Icon name="chevron-right" />
+			<Icon name="file-download" color="yellow" width="40px" height="50px" />
+			<Icon name="file-upload" style={{ color: "white", width: "30px" }} />
+			<Icon name="add" style={{ color: "red", width: "30px" }} />
+			<Icon name="chevron-left" style={{ color: "white", width: "30px" }} />
+			<Icon name="arrow-forward" style={{ color: "white", width: "30px" }} />
+			<Icon name="chevron-right" style={{ color: "white", width: "30px" }} />
 		</>
 	);
 }
