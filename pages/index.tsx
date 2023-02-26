@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { Icon } from "@/components/Icon";
+import Icons from "@/components/Icons";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -19,6 +20,11 @@ export default function Home() {
 			<Icon name="chevron-left" style={{ color: "white", width: "30px" }} />
 			<Icon name="arrow-forward" style={{ color: "white", width: "30px" }} />
 			<Icon name="chevron-right" style={{ color: "white", width: "30px" }} />
+
+			<Icons name="heart" />
+			<Icons name="logo" />
+			<Icons name="ca-caret-down" />
+			<Icons name="show-more" />
 		</>
 	);
 }
